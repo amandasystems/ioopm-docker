@@ -1,7 +1,6 @@
 FROM ubuntu:vivid
 MAINTAINER Albin Stjerna <albin.stjerna@gmail.com>
 
-ENV DEBIAN_FRONTEND noninteractive
 
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
@@ -17,13 +16,18 @@ RUN \
           curl \
           zsh \
           valgrind \
+          sudo \
           gdb \
           git
 
-RUN useradd -ms /usr/bin/zsh ioopm-user
-USER ioopm-user
+RUN useradd -G sudo -ms /usr/bin/zsh ioopm-user
+RUN mkdir -p /home/ioopm-user/Work \
+    && chown -R ioopm-user:ioopm-user /home/ioopm-user/Work
 WORKDIR /home/ioopm-user
 env HOME /home/ioopm-user
-COPY zshrc .zshrc
+USER ioopm-user
+COPY zshrc /home/ioopm-user/.zshrc
 RUN git clone https://github.com/overtone/emacs-live .emacs.d
 RUN git clone https://github.com/IOOPM-UU/ioopm15
+VOLUME /home/ioopm-user/Work
+CMD /usr/bin/zsh
