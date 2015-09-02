@@ -8,6 +8,8 @@ Om du kör Unix redan kan du byta ut `%HOMEPATH%/Work` mot `$USER/Work`. I båda
 
 **DÖDSBLODSVARNING! Allt som du lägger någon annanstans än i Work-mappen i /home/ioopm-user kommer att försvinna när du stänger av Docker!**
 
+Standardlösenordet för den nya användaren är alohomora. Om du tänker nätverka din Docker-maskin, *BYT DET*!
+
 Saker som ingår:
 - Zsh (som standard)
 - Kursrepot från Git
@@ -16,3 +18,14 @@ Saker som ingår:
 - En vanlig Ubuntu-konfiguration
 - Make, GCC etc.
 - Valgrind, cflow och GDB
+- Manualsidor
+
+Saker att testa
+- gdb i Emacs! Kör M-x gdb följt av M-x gdb-many-windows!
+- yasnippet! prova att skriva mai och trycka tabb i en C-fil!
+
+Errata/Att fixa:
+- lättare uppstart
+- smidigt sätt att ha en beständig egen Emacs-conf
+- möjlighet att plugga in sin egen kurs-repo/redovisningsgit och få den hämtad vid uppstart
+- lämpliga förinställningar för att bygga C-program i Emacs
