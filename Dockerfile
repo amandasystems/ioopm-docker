@@ -21,7 +21,8 @@ RUN \
           gdb \
           git
 
-RUN useradd -G sudo -ms /usr/bin/zsh ioopm-user
+RUN useradd -G sudo -ms /usr/bin/zsh ioopm-user \
+    && echo "ioopm-user:alohomora" | chpasswd
 RUN mkdir -p /home/ioopm-user/Work \
     && chown -R ioopm-user:ioopm-user /home/ioopm-user/Work
 WORKDIR /home/ioopm-user
