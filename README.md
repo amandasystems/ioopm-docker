@@ -6,7 +6,7 @@ Sedan kör du med `docker run -v "%HOMEPATH%/Work":/home/ioopm-user/Work -it ioo
 
 Om du kör Unix redan kan du byta ut `%HOMEPATH%/Work` mot `$USER/Work`. I båda fallen förutsätter detta förstås att den mappen (på Windows C:\Users\dittnamn\Work) finns. Om mappen inte finns kommer Docker att skapa den -- men som fel användare (beroende på konfiguration).
 
-*DÖDSBLODSVARNING! Allt som du lägger någon annanstans än i Work-mappen i /home/ioopm-user kommer att försvinna när du stänger av Docker!*
+**DÖDSBLODSVARNING! Allt som du lägger någon annanstans än i Work-mappen i /home/ioopm-user kommer att försvinna när du stänger av Docker!**
 
 Saker som ingår:
 - Zsh (som standard)
