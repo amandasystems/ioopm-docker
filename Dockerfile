@@ -15,6 +15,7 @@ RUN \
           unzip \
           curl \
           zsh \
+          man-db \
           valgrind \
           sudo \
           gdb \
@@ -29,5 +30,4 @@ USER ioopm-user
 COPY zshrc /home/ioopm-user/.zshrc
 RUN git clone https://github.com/overtone/emacs-live .emacs.d
 RUN git clone https://github.com/IOOPM-UU/ioopm15
-VOLUME /home/ioopm-user/Work
 CMD /usr/bin/zsh
