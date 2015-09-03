@@ -1,5 +1,6 @@
 ## Översikt ##
 Jag ser fem alternativ:
+
 1. Sätt upp [MinGW](http://www.mingw.org/wiki/howto_install_the_mingw_gcc_compiler_suite) och Emacs på Windows.
 2. Dual-boota med en Unix på din egen dator eller SSH:a in till skolan
 3. Installera en egen virtuell maskin, t.ex. m.h.a. VirtualBox.
